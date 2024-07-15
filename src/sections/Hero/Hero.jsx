@@ -1,3 +1,5 @@
+// eslint-disable-next-line no-unused-vars
+import React, { useState } from 'react';
 import styles from './HeroStyles.module.css';
 import heroImg from '../../assets/hero-img.png';
 import sun from '../../assets/sun.svg';
@@ -13,6 +15,11 @@ import { useTheme } from '../../common/ThemeContext';
 
 function Hero() {
   const { theme, toggleTheme } = useTheme();
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
 
   const themeIcon = theme === 'light' ? sun : moon;
   const twitterIcon = theme === 'light' ? twitterLight : twitterDark;
@@ -20,7 +27,7 @@ function Hero() {
   const linkedinIcon = theme === 'light' ? linkedinLight : linkedinDark;
 
   return (
-    <section id="hero" className={styles.container}>
+    <section id="hero" className={`${styles.container} ${darkMode ? styles['dark-mode'] : ''}`}>
       <div className={styles.colorModeContainer}>
         <img
           src={heroImg}
@@ -52,13 +59,15 @@ function Hero() {
             <img src={linkedinIcon} alt="Linkedin icon" />
           </a>
         </span>
-        <p className={styles.description}>
-          With a passion for developing modern web applications for commercial
-          businesses.
+        <p className={`${styles.description} ${styles.center}`}>
+          With a passion for developing modern web applications for commercial businesses.
         </p>
         <a href={CV} download>
-          <button className="hover">Resume</button>
+          <button className="hover">Download Resume</button>
         </a>
+        <button className={`hover ${styles.toggleDarkMode}`} onClick={toggleDarkMode}>
+          Toggle Dark Mode
+        </button>
       </div>
     </section>
   );
