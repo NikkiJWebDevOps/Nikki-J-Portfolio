@@ -1,4 +1,4 @@
-// eslint-disable-next-line no-unused-vars
+
 import React, { useState } from 'react';
 import styles from './HeroStyles.module.css';
 import heroImg from '../../assets/hero-img.png';
@@ -10,7 +10,7 @@ import githubLight from '../../assets/github-light.svg';
 import githubDark from '../../assets/github-dark.svg';
 import linkedinLight from '../../assets/linkedin-light.svg';
 import linkedinDark from '../../assets/linkedin-dark.svg';
-import CV from '../../assets/cv.pdf';
+import CV from '../../assets/CV.pdf';
 import { useTheme } from '../../common/ThemeContext';
 
 function Hero() {
@@ -49,13 +49,13 @@ function Hero() {
         </h1>
         <h2> Application Engineer / Frontend Developer </h2>
         <span>
-          <a href="https://twitter.com/" target="_blank">
+          <a href="https://twitter.com/" target="_blank ">
             <img src={twitterIcon} alt="Twitter icon" />
           </a>
-          <a href="https://github.com/NikkiJWebDevOps/Nikki-J-Portfolio" target="_blank">
+          <a href="https://github.com/NikkiJWebDevOps/Nikki-J-Portfolio" target="_blank ">
             <img src={githubIcon} alt="Github icon" />
           </a>
-          <a href="https://www.linkedin.com/in/nikkijohnsonwebdev/" target="_blank">
+          <a href="https://www.linkedin.com/in/nikkijohnsonwebdev/" target="_blank ">
             <img src={linkedinIcon} alt="Linkedin icon" />
           </a>
         </span>
