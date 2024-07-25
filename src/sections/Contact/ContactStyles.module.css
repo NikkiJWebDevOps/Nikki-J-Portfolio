@@ -1,79 +1,66 @@
+/* ContactStyles.module.css */
+
 .container {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center; /* Center text */
+  background-color: #ffffff; /* White background for form container */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+.title {
+  font-size: 2rem;
+  margin-bottom: 10px; /* Reduced space above title */
 }
 
-textarea,
-input:not([type='submit']) {
-  height: 50px;
-  padding-left: 16px;
-  width: 250px;
+.thankYouMessage {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formGroup {
+  margin-bottom: 10px; /* Reduced space between form groups */
+  width: 100%; /* Ensure full width for inputs */
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px; /* Round corners for inputs and textarea */
 }
 
 textarea {
-  padding-top: 16px;
-  resize: none;
-  height: 250px;
+  resize: vertical;
+  min-height: 80px; /* Reduced minimum height */
 }
 
-input,
-textarea {
-  border-radius: 20px;
-  border: #888 1px solid;
-  box-sizing: border-box;
-  justify-self: center;
-  background-color: var(--background-color);
-  color: var(--form-text-color);
-}
-
-::placeholder {
-  color: var(--form-text-color);
-}
-
-input[type='submit'] {
-  background-color: var(--btn-color);
-  color: var(--btn-text-color);
+.submitButton {
+  background-color: #007bff;
+  color: white;
   border: none;
-  border-radius: 20px;
-  width: 126px;
-  height: 50px;
-  font-size: 20px;
-  font-weight: bold;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
-  margin: auto;
+  padding: 10px 20px;
+  border-radius: 20px; /* Round button */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
 }
 
-input[type='submit']:hover {
-  transform: scale(1.05);
+.submitButton:hover {
+  background-color: #0056b3;
 }
 
-input[type='submit']:active {
-  transform: translateY(2px);
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
-}
-
-@media (width >= 800px) {
-  textarea,
-  input:not([type='submit']) {
-    width: 600px;
-    font-size: 20px;
-  }
-  form {
-    gap: 40px;
-  }
-}
-
-@media (width >= 1400px) {
-  textarea,
-  input:not([type='submit']) {
-    width: 800px;
-  }
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
 }
