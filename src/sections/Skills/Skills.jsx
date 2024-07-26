@@ -5,13 +5,13 @@ function Skills() {
   return (
     <section id="skills" className={styles.container}>
       <h1 className={styles.title}>Skills</h1>
-      <div className={styles.skillsList}>
-        <div className={styles.skill}>JavaScript</div>
-        <div className={styles.skill}>React</div>
-        <div className={styles.skill}>CSS</div>
-        <div className={styles.skill}>HTML</div>
+      <ul className={styles.skillsList}>
+        <li className={styles.skill}>JavaScript</li>
+        <li className={styles.skill}>React</li>
+        <li className={styles.skill}>CSS</li>
+        <li className={styles.skill}>HTML</li>
         {/* Add other skills here */}
-      </div>
+      </ul>
     </section>
   );
 }
