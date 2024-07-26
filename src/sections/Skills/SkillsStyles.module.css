@@ -13,7 +13,7 @@
 
 .skillsList {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap; /* Ensure skills wrap to next line if they exceed container width */
   gap: 10px; /* Space between each skill */
 }
 
@@ -21,4 +21,5 @@
   background-color: #f4f4f4; /* Example background color */
   padding: 10px;
   border-radius: 4px;
+  flex: 1 1 100px; /* Flexbox settings for skill items */
 }
