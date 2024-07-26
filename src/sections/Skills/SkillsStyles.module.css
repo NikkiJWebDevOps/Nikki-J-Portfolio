@@ -4,6 +4,7 @@
 .container {
   padding: 20px; /* Adjust padding as needed */
   margin-bottom: 40px; /* Add spacing below the Skills section to separate from Contact section */
+  text-align: center; /* Center-align text inside the container */
 }
 
 .title {
@@ -14,6 +15,7 @@
 .skillsList {
   list-style-type: none; /* Remove default list bullets */
   padding: 0; /* Remove default padding */
+  display: inline-block; /* Make the list an inline-block for centering */
 }
 
 .skill {
