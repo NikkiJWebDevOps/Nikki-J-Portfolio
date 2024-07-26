@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './skillsstyles.module.css'; // Make sure this is the correct path
+import styles from './SkillsStyles.module.css'; // Make sure this is the correct path
 
 function Skills() {
   return (
