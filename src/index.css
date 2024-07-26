@@ -1,36 +1,44 @@
 /* index.css */
 
-body {
-          background-color: white;
-          color: black;
-          transition: background-color 0.3s, color 0.3s;
-        }
-        
-        button {
-          background-color: #007bff;
-          color: white;
-          border: none;
-          padding: 10px 20px;
-          border-radius: 4px;
-          cursor: pointer;
-          transition: background-color 0.3s;
-        }
-        
-        button:hover {
-          background-color: #0056b3;
-        }
-        
-        /* Additional styling for other elements can be added here */
-    body {
-          background-color: #D3D3D3; /* Light gray background */
-          margin: 0;
-          font-family: Arial, sans-serif; /* Ensure consistent font */
-        }
-        /* index.css */
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* Ensure consistent styling across the application */
 body {
-          background-color: #D3D3D3; /* Light gray background */
-          margin: 0;
-          font-family: 'Poppins', sans-serif; /* Use Poppins font */
-        }
-        
+  background-color: #D3D3D3; /* Light gray background */
+  color: black;
+  margin: 0;
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Additional styling for other elements can be added here */
+/* index.css */
+
+/* Ensure consistent styling across the application */
+.app-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills {
+  margin-bottom: 40px; /* Adjust spacing as needed */
+}

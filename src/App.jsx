@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css';
+import './index.css'; // Ensure this contains global styles
 import Contact from './sections/Contact/Contact';
 import Footer from './sections/Footer/Footer';
 import Hero from './sections/Hero/Hero';
@@ -8,7 +8,7 @@ import Skills from './sections/Skills/Skills';
 
 function App() {
   return (
-    <div>
+    <div className="app-container">
       <Hero />
       <Projects />
       <Skills />

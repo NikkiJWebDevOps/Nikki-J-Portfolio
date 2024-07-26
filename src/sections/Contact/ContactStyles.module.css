@@ -64,3 +64,15 @@ textarea {
   font-size: 0.9rem;
   margin-top: 5px;
 }
+/* ContactStyles.module.css */
+.contact-container {
+  /* Existing styles */
+  margin-top: 40px; /* Adjust spacing as needed */
+}
+/* ContactStyles.module.css */
+
+/* Container for the Contact section */
+.contact-container {
+  padding: 20px; /* Adjust padding as needed */
+  margin-top: 40px; /* Add spacing above the Contact section if needed */
+}

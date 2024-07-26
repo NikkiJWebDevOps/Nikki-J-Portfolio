@@ -1,3 +1,19 @@
+/* HeroStyles.module.css */
+
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif; /* Use a consistent font */
+  line-height: 1.6;
+}
+
+/* Container */
 .container {
   display: flex;
   flex-direction: column;
@@ -7,69 +23,78 @@
   height: 100vh;
   min-height: 500px;
   position: relative;
-
-  .hero {
-    max-width: 200px;
-  }
-
-  span {
-    display: flex;
-    gap: 25px;
-    justify-content: center;
-
-    a {
-      margin: 0;
-
-      img {
-        width: 30px;
-      }
-    }
-  }
-
-  a {
-    width: fit-content;
-    align-self: center;
-  }
-
-  button {
-    background-color: var(--btn-color);
-    color: var(--btn-text-color);
-    border: none;
-    border-radius: 20px;
-    width: 126px;
-    height: 50px;
-    font-size: 20px;
-    font-weight: bold;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-
-  button:hover {
-    transform: scale(1.05);
-  }
-
-  button:active {
-    transform: translateY(2px);
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
-  }
-
-  .description {
-    max-width: 24ch;
-    margin: 0 auto; /* Center the paragraph */
-  }
-
-  .center {
-    text-align: center; /* Ensure text alignment is centered */
-  }
 }
 
+/* Hero Image */
+.hero {
+  max-width: 200px;
+}
+
+/* Span inside container */
+.container span {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+/* Links inside span */
+.container span a {
+  margin: 0;
+}
+
+.container span a img {
+  width: 30px;
+}
+
+/* Link styling */
+.container a {
+  width: fit; /* Correct value */
+  align-self: center;
+}
+
+/* Button styling */
+.container button {
+  background-color: var(--btn-color);
+  color: var(--btn-text-color);
+  border: none;
+  border-radius: 20px;
+  width: 126px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.container button:hover {
+  transform: scale(1.05);
+}
+
+.container button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* Description styling */
+.description {
+  max-width: 24ch;
+  margin: 0 auto; /* Center the paragraph */
+}
+
+/* Center class */
+.center {
+  text-align: center; /* Ensure text alignment is centered */
+}
+
+/* Color Mode Container */
 .colorModeContainer {
   position: relative;
 }
 
+/* Color Mode styling */
 .colorMode {
   position: absolute;
   right: 0;
@@ -80,30 +105,30 @@
   cursor: pointer;
 }
 
+/* Info section */
 .info {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
+/* Media queries */
 @media (min-width: 800px) {
   .container {
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-evenly;
+  }
 
-    .hero {
-      max-width: 350px;
-      width: 350px;
-    }
+  .hero {
+    max-width: 350px;
+    width: 350px;
   }
 }
 
 @media (min-width: 1400px) {
-  .container {
-    .hero {
-      max-width: 400px;
-      width: 400px;
-    }
+  .hero {
+    max-width: 400px;
+    width: 400px;
   }
 }

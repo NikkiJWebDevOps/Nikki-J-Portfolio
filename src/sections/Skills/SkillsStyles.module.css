@@ -1,47 +1,24 @@
+/* SkillsStyles.module.css */
+
+/* Container for the Skills section */
 .container {
+  padding: 20px; /* Adjust padding as needed */
+  margin-bottom: 40px; /* Add spacing below the Skills section to separate from Contact section */
+}
+
+.title {
+  font-size: 2rem; /* Adjust font size as needed */
+  margin-bottom: 20px; /* Space below the title */
+}
+
+.skillsList {
   display: flex;
   flex-direction: column;
-  text-align: center;
-
-  span {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-
-  img {
-    width: 20px;
-  }
+  gap: 10px; /* Space between each skill */
 }
 
-.skillList {
-  display: flex;
-  justify-content: space-evenly;
-  align-self: center;
-  flex-wrap: wrap;
-  row-gap: 40px;
-  max-width: 26ch;
-}
-
-hr {
-  width: 100px;
-  height: 1px;
-  border: none;
-  background-color: var(--text-color);
-  margin: 30px auto;
-}
-
-@media (width >= 800px) {
-  .skillList {
-    max-width: fit;
-    gap: 30px;
-
-    p {
-      font-size: 20px;
-    }
-  }
-
-  hr {
-    width: 300px;
-  }
+.skill {
+  background-color: #f4f4f4; /* Example background color */
+  padding: 10px;
+  border-radius: 4px;
 }
