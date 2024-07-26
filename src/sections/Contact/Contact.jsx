@@ -13,7 +13,7 @@ function Contact() {
   const validateForm = () => {
     const newErrors = {};
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const phonePattern = /^\d{10}$/; // Simple phone number validation (10 digits)
+    const phonePattern = /^\d{3}-\d{3}-\d{4}$/; // Updated phone number validation (123-456-7890)
 
     if (!firstName || !lastName) {
       newErrors.name = 'Full name is required';
@@ -22,7 +22,7 @@ function Contact() {
       newErrors.email = 'Please enter a valid email address';
     }
     if (!phonePattern.test(phone)) {
-      newErrors.phone = 'Please enter a valid phone number (10 digits)';
+      newErrors.phone = 'Please enter a valid phone number (123-456-7890)';
     }
     if (!message) {
       newErrors.message = 'Message is required';
@@ -80,12 +80,12 @@ function Contact() {
             />
           </div>
           <div className={styles.formGroup}>
-            <label htmlFor="email" hidden>Email</label>
+            <label htmlFor="email" hidden>Email Address</label>
             <input
               type="email"
               name="email"
               id="email"
-              placeholder="Email"
+              placeholder="Email@domain.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -98,7 +98,7 @@ function Contact() {
               type="tel"
               name="phone"
               id="phone"
-              placeholder="Phone Number (1234567890)"
+              placeholder="Phone Number (123-456-7890)"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               required
@@ -106,7 +106,7 @@ function Contact() {
             {errors.phone && <p className={styles.error}>{errors.phone}</p>}
           </div>
           <div className={styles.formGroup}>
-            <label htmlFor="message" hidden>Message</label>
+            <label htmlFor="message" hidden>Message/Request</label>
             <textarea
               name="message"
               id="message"
