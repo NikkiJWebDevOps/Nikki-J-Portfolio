@@ -12,14 +12,11 @@
 }
 
 .skillsList {
-  display: flex;
-  flex-wrap: wrap; /* Ensure skills wrap to next line if they exceed container width */
-  gap: 10px; /* Space between each skill */
+  list-style-type: none; /* Remove default list bullets */
+  padding: 0; /* Remove default padding */
 }
 
 .skill {
-  background-color: #f4f4f4; /* Example background color */
-  padding: 10px;
-  border-radius: 4px;
-  flex: 1 1 100px; /* Flexbox settings for skill items */
+  font-size: 1.2rem; /* Adjust font size as needed */
+  margin-bottom: 10px; /* Space between each skill */
 }
